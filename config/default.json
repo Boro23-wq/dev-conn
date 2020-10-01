@@ -2,5 +2,6 @@
   "jwtSecret": "mysecrettoken",
   "githubClientId": "7050dae3475f3f49b5b5",
   "githubSecret": "658ac7696724f8906bbbb98d0c8326310f44744d",
-  "mongoURI": "mongodb+srv://23Boro:23Boro@connectdev-opevw.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://23Boro:23Boro@connectdev-opevw.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "githubToken": "a60848061769b06084a37079f0356516036df3a4"
 }

@@ -4,39 +4,40 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   const authLinks = (
     <ul>
       <li>
         <Link to='/profiles'>
-          <i className='fa fa-user-circle'></i> Developers
+          <i className='fas fa-user-alt' />{' '}
+          <span className='hide-sm'>Developers</span>
         </Link>
       </li>
       <li>
         <Link to='/posts'>
-          <i className='fa fa-book-open'></i> Posts
+          <i className='fas fa-user-plus' />{' '}
+          <span className='hide-sm'>Posts</span>
         </Link>
       </li>
       <li>
         <Link to='/dashboard'>
-          <i className='fas fa-user'></i>{' '}
+          <i className='fas fa-users-cog' />{' '}
           <span className='hide-sm'>Dashboard</span>
         </Link>
       </li>
       <li>
         <a onClick={logout} href='#!'>
-          <i className='fas fa-sign-out-alt'></i>{' '}
+          <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>
       </li>
     </ul>
   );
+
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>
-          <i className='fas fa-profile'></i> Developers
-        </Link>
+        <Link to='/profiles'>Developers</Link>
       </li>
       <li>
         <Link to='/register'>Register</Link>
@@ -51,12 +52,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='fas fa-meteor'></i> Developers Connect
+          <i className='fas fa-code-branch' /> Developers Connect
         </Link>
       </h1>
-      {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-      )}
+      <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
     </nav>
   );
 };

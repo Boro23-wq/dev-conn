@@ -1,21 +1,23 @@
 /* Global Styles */
 :root {
-  --primary-color: #000;
-  --dark-color: #000;
+  --primary-color: #6c5ce7;
+  --dark-color: #2d3436;
   --light-color: #f4f4f4;
-  --danger-color: #ce0c36;
-  --success-color: #83f52c;
+  --danger-color: #d63031;
+  --success-color: #00b894;
+  --black-color: #000;
 }
 
 * {
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
@@ -46,19 +48,20 @@ img {
 
 /* Text Styles*/
 .x-large {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.large {
   font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
+.large {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
 .lead {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -131,7 +134,7 @@ img {
   background: var(--light-color);
   color: #333;
   padding: 0.4rem 1.3rem;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
@@ -161,7 +164,6 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
-  border-radius: 20px;
   color: #fff;
 }
 
@@ -170,20 +172,14 @@ img {
 .badge-light,
 .alert-light {
   background: var(--light-color);
-  border-radius: 20px;
   color: #333;
 }
 
 .btn-dark,
+.bg-dark,
 .badge-dark,
 .alert-dark {
-  background: var(--dark-color);
-  border-radius: 20px;
-  color: #fff;
-}
-
-.bg-dark {
-  background: var(--dark-color);
+  background: var(--black-color);
   color: #fff;
 }
 
@@ -192,7 +188,6 @@ img {
 .badge-danger,
 .alert-danger {
   background: var(--danger-color);
-  border-radius: 20px;
   color: #fff;
 }
 
@@ -201,7 +196,6 @@ img {
 .badge-success,
 .alert-success {
   background: var(--success-color);
-  border-radius: 20px;
   color: #fff;
 }
 
@@ -210,7 +204,6 @@ img {
 .badge-white,
 .alert-white {
   background: #fff;
-  border-radius: 20px;
   color: #333;
   border: #ccc solid 1px;
 }
@@ -236,7 +229,7 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -318,8 +311,7 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  /* border-bottom: solid 1px var(--primary-color); */
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .navbar ul {
@@ -330,10 +322,11 @@ button {
   color: #fff;
   padding: 0.45rem;
   margin: 0 0.25rem;
+  transition: all 0.2s;
 }
 
 .navbar a:hover {
-  color: #c9c9c9;
+  color: var(--primary-color);
 }
 
 .navbar .welcome span {
@@ -400,7 +393,7 @@ button {
 }
 
 .profile-top .icons a:hover {
-  color: #c9c9c9;
+  color: var(--dark-color);
 }
 
 .profile-about {
@@ -487,8 +480,9 @@ button {
 .post .comment-count {
   background: var(--light-color);
   color: var(--primary-color);
-  padding: 0.1rem 0.2rem;
-  border-radius: 5px;
+  padding: 0.1rem 0.3rem;
+  margin-left: 0.5rem;
+  border-radius: 2.5px;
   font-size: 0.8rem;
 }
 
